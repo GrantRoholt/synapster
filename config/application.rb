@@ -64,5 +64,8 @@ module Synapster
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    # Ensures that Rails throws errors on invalid mass assignments    
+    config.active_record.whitelist_attributes = true
+
   end
 end

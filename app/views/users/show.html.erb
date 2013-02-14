@@ -8,5 +8,16 @@
            </h1>
 		</section>
   </aside>
+
+  <div class="span8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+ 
 </div>		
 <%= @user.name %>, <%= @user.email %>, <%= @user.twitter_id %>, <%= @user.facebook_id %>, <%= @user.birth_date %>, <%= @user.credit_score %>, <%= @user.blood_pressure %>, <%= @user.heart_rate %>, <%= @user.ssn %>, <%= @user.mph %>, <%= @user.linkedin_id %>, <%= @user.national_id_number %>, <%= @user.updated_at %>
